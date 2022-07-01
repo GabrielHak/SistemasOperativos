@@ -9,6 +9,8 @@ Temas:
 * [Objetivos de diseño](#objetivos-de-diseño)
 * [Historia](#algo-de-historia)
 
+Bibliografia: [OSTEP Cap 2 - Introduction](https://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf)
+
 &emsp;Un programa en ejecucion hace una simple cosa: ejecuta instruccions. Millones e incluso miles de millones por segundo, el procesador busca (**fetchs**) una instruccion de la memoria, la decodifica (decodes), y la ejecuta (**executes**). Despues de ejecutarla, el procesador se mueve a lsa siguiente instruccion y asi sucesivamente hasta que el programa finalmente se completa.
 &emsp;Y como dice Wolovick:</br>
 
@@ -89,4 +91,4 @@ while(true){
 &emsp;Desafortunadamente, para los OSes, la PC al principio represento un gran salto hacia atras, ya que los primeros sistemas olvidaron las lecciones aprendidas en la era de las minicomputadoras. Por ejemplo, los primeros OSes como DOS (Disk Operating System from Microsoft) no creia que la proteccion de memoria fuera importante; por lo tanto, una aplicacion maliciosa (o simplemente mal programada) podria garabatear toda la memoria. La primera generacion de Mac OS, v9 y anteriores, tomaron un enfoque colaborativo para la planificacion de trabajos; por lo tanto, un hilo que accidentalmente quedo trabado en un loop infinito podia romper todo el sistema, forzando un reinicio.</br>
 &emsp;Afoprtunadamente,despues de unos años de sufrimiento, la caracteristicas viejas de los OSes de las mincomputadoras enontraron su camino en las computadoras de escritorio.</br>
 
-[Anterior](Capitulos.md) [Siguiente](Virtualizacion.md)
+[Anterior](../Capitulos.md) [Siguiente](../Virtualizacion/Procesos.md)

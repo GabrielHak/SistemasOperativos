@@ -2,7 +2,7 @@
 
 Indice de temas y capitulos:
 
-* [Introduccion](Introduccion.md):
+* [Introduccion](./Introduccion/Introduccion.md):
 
   * Virtualizaion de CPU
   * Virtualizacion de memoria
@@ -11,7 +11,7 @@ Indice de temas y capitulos:
   * Objetivos de diseño
   * Historia
 
-* [Parte I &rarr; Virtualizacion](Virtualizacion.md):
+* [Parte I &rarr; Virtualizacion](./Virtualizacion/Procesos.md):
 
   * Procesos
   * API de procesos
@@ -45,4 +45,4 @@ Indice de temas y capitulos:
   * Consistencia ante caidas, fsck y bitacora
   * Sitemas de archivos por bitacora
 
-[Siguiente](Introduccion.md)
+[Siguiente](./Virtualizacion/Procesos.md)
