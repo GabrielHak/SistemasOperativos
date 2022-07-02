@@ -45,4 +45,4 @@ Indice de temas y capitulos:
   * Consistencia ante caidas, fsck y bitacora
   * Sitemas de archivos por bitacora
 
-[Siguiente](./Virtualizacion/Procesos.md)
+[Siguiente](./Introduccion/Introduccion.md)

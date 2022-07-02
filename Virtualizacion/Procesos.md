@@ -11,6 +11,7 @@ Temas:
   * [Estructuras de Datos](#estructuras-de-datos)
 
 * [API de procesos](./API-de-procesos.md)
+* [Ejecucion directa limitada](./Ejecucion-directa.md)
 * [Planificacion](Virtualizacion-Planificacion.md)
 * [Espacio de direcciones](Virtualizacion-espacio-de-direcciones.md)
 * [API de memoria](Virtualizacion-API-de-memoria.md)
@@ -25,7 +26,7 @@ Bibliografia: [OSTEP Cap 4 - Processes](https://pages.cs.wisc.edu/~remzi/OSTEP/c
 
 ## Procesos
 
-&emsp;Los procesos son la abstracion mas fundamental que los OSes proporsionan al usuario. la definicion (informal) de procesos es simple: es un programa en ejecucion. El programa por si mismo el algo sin vida, solo esta ahi en el disco, un puñado de instrucciones esperando entrar en accion. Es el OS el que toma esos bytes y los pone en ejecucion, tranformando el programa en algo util.</br>
+&emsp;Los procesos son la abstracion mas fundamental que los OSes proporcionan al usuario. la definicion (informal) de procesos es simple: es un programa en ejecucion. El programa por si mismo el algo sin vida, solo esta ahi en el disco, un puñado de instrucciones esperando entrar en accion. Es el OS el que toma esos bytes y los pone en ejecucion, tranformando el programa en algo util.</br>
 &emsp;Resulta que a menudo mas de un programa quiere ejecutarse a la vez</br>
 &emsp;Para dar la ilusion de que se ejecutan al mismo tiempo, el OS **virtualiza** la CPU. Ejecutando un procesos, parandolo, ejecutando otro, y parandolo, y asi sucesivamente. El OS puede fomentar la idea de que hay muchas CPUs virtuales cuando enrealidad solo hay una CPU fisica, o unas pocas. Esta tecnica basica, conociada como tiempo comparido de CPU (**time sharing of CPU**), permite a los usuarios correr tantos procesos de forma concurrente como ellos quieran; el costo potencial es el desempeño, cada proceso se ejecutara mas lento si las CPUs deben ser compartidas.</br>
 &emsp;Para implementar la virtualizacio de la CPU, e implementarla bien, el OS necesita dos cosas, maquinaria de bajo nivel, e inteligencia de alto nivel. A la maquinaria de bajo nivel la llamamos **mecanismos**; los mecanismos son metodos de bajo nivel o protocolos que implementan una pieza necesaria de funcionalidad.</br>
@@ -57,8 +58,8 @@ Lo que cualquier interfaces de un OS deberia incluir. Estas APIs, de alguna form
 &emsp;Un misterio que debemos desenmascarar, es como los programas son transformados en procesos. Especificamente como el OS toma un programa y lo ejecuta y como funciona funciona el proceso de creacion de procesos</br>
 &emsp;La primera cosa que debe hacer el OS para ejecutar un programa es cargar su codigo y cualquier data estatico (como variables inicializadas) dentro de la memoria, en el espacio de memoria del proceso. Los programas incialmente residen en el disco en algun tipo de formate ejecutable; por lo tanto, el proceso de cargar un programa y datos estaticos en la memoria requiere que el OS lea esos bytes del disco y los ubique en algun lugar de la memoria.</br>
 &emsp;En los primeros OS, la carga de procesos era realizada "ansiosamente" (**eagerly**), es decir, todos a la vez antes de ejecutar el programa; los OSes modernos lo hacen "perezosamente" (**lazily**), es decir, van cargando las partes de codigo o datos solo cuando son necesarias durante la ejecucion del programa.</br>
-&emsp;Una vez el codigo y los datos estaticos estan cargados en la memoria, hay un par de cosas mas que el OS debe hacer antes de ejecutar el proceso. Como asignar (**allocate**) algo de memoria para el (**runt-time stack** o solo **stack**). Los programas escritos en C usan el stack para variables locales, parametros de funciones, y return de direcciones. El OS tambien debe inicializar el stack con argumentos; especificamente, llenara los parametros para la funcion main() del proceso.</br>
-&emsp;El OS tambien puede asignar algo de memoria para el **heap** del programa. En los programas en C, el heap es usado cuando se solicita explicitamente guardas datos dinmicamente. Los programas solicitan ese espacio llamando a *calloc* o *malloc* y liberandolo explicitamente llamando a *free()*. El heap es necesitado por estructuras de datos como las listan enlazadas, tablas hash, arboles, etc.</br>
+&emsp;Una vez el codigo y los datos estaticos estan cargados en la memoria, hay un par de cosas mas que el OS debe hacer antes de ejecutar el proceso. Como asignar (**allocate**) algo de memoria para el (**runt-time stack** o solo **stack**). Los programas escritos en C usan el stack para variables locales, parametros de funciones, y return de direcciones. El OS tambien debe inicializar el stack con argumentos; especificamente, llenara los parametros para la funcion ```main()``` del proceso.</br>
+&emsp;El OS tambien puede asignar algo de memoria para el **heap** del programa. En los programas en C, el heap es usado cuando se solicita explicitamente guardas datos dinmicamente. Los programas solicitan ese espacio llamando a ```calloc()``` o ```malloc()``` y liberandolo explicitamente llamando a ```free()```. El heap es necesitado por estructuras de datos como las listan enlazadas, tablas hash, arboles, etc.</br>
 &emsp;El OS tambien hara algunas otras tareas de inicializacion, particularmente relaciondas con I/O. Por ejemplo, en los sistemas UNIX, cada proceso por defecto, tiene abierto tres **file descriptors**, para **stanard input**, ***standar output*** y para **errores**; esos file descriptors le permiten a los programas leer entradas de la terminal e imprimir salidas en la pantalla.</br>
 
 Resumen de las tareas que hace el OS para crear un proceso:
@@ -67,9 +68,9 @@ Resumen de las tareas que hace el OS para crear un proceso:
 * Crear e inicializar el stack
 * Crear e inicializar el heap
 * Hacer tareas relacionadas a I/O
-* Inciar la ejecucion del programa en el puntro de entrada, llamado **main()**
+* Inciar la ejecucion del programa en el puntro de entrada, llamado ```main()```
   
-  * Al saltar a la rutina main(), el OS transfiere el control de la CPU al proceso recien creado, y por lo tanto el programa entra en ejecucion
+  * Al saltar a la rutina ```main()```, el OS transfiere el control de la CPU al proceso recien creado, y por lo tanto el programa entra en ejecucion
 
 ### Estado de los procesos
 
