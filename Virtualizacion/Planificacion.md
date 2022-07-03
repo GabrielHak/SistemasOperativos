@@ -13,6 +13,7 @@ Temas:
   * [Shortest Job First (SJF)](#shortest-job-first-sjf)
   * [Shortest Time-to-Completion First (STCF)](#shortest-time-to-completion-first-stcf)
   * [Una nueva metrica: Tiempo de respuesta (Respose Time)](#una-nueva-metrica-tiempo-de-respuesta-response-time)
+  * [Round Robin](#round-robin)
 
 * [Planificacion multinivel](./Planificador-multinivel.md)
 * [Espacio de direcciones](Virtualizacion-espacio-de-direcciones.md)
@@ -120,5 +121,31 @@ $$T_{response} = T_{firstrun} - T_{arrival}$$
 
 &emsp;Por ejemplo, si tenemos la planificacion como en el caso anterior (Con A llegando al 0, y B y C al 10), el tiempo de respuesta de cada proceso seria: 0 para A, 0 para B, y 10 para C (promedio 3.33)</br>
 &emsp;STCF y las disciplinas relacionas no son buenas para el tiempo de respuesta. Si, por ejemplo, los tres procesos llegan a la vez, el tercero tendria que esperar a que los primeros dos terminen antes de poder ejecutarse una vez. Mientras que es bueno para el tiempo de entrega, este enfoque es malo para el tiempo de respuesta y la interactividad. Como podriamos construir un planificador que sea sensible al tiempo de respuesta?</br>
+
+### Round Robin
+
+&emsp;Para resolver este problema, introduciremos un nuevo algoritmo de planificacion, clasicamente nos referimos a el como planificacion **Round-Robin (RR)**. La idea basica es simple: en vez de ejecutar procesos hasta que finalicen, RR ejecuta un proceso por una porcion de tiempo (a veces llamada **planificacion cuantica (scheduling quantum)**) y entonces cambia al siguiente proceso en la cola. Hace esto repetidamente hasta que todos los procesos se completen. Por este razon, RR a veces es llamado **time-slicing**. Notar que la longitud del periodo de tiempo, tiene que ser multiplo del periodo de interrupcion; por lo tanto si el timer se interrupte cada 10 milisegundos, el periodo de tiempo pordria ser 10, 20, o cualquier otro multiplo de 10ms.</br>
+&emsp;Para entender RR con mas detalles, vamos un ejemplo. Asusmamos que tres procesos A, B, y C llegan al mismo tiempo al sistema, u que cada uno quiere ejecutarse 5s. Un plnificador SJF ejecutara cada proceso hasta que se complete antes de ejecutar otro, ver la siguiente imagen.</br>
+
+![SJF Again (Bad Time Response)](../Imagenes/SJF-again.png)
+
+&emsp;En contraste, RR con un **time-slice** de 1s que ciclara a traves de los procesos rapidamente, ver la siguiente imagen.</br>
+
+![Round Robin (God For Response Time)](../Imagenes/RoundRobin.png)
+
+&emsp;El **tiempo de respuesta promedio de RR** es:</br>
+
+$$\frac{0 + 1 + 2}{3} = 1$$
+
+&emsp;Y el **tiempo de respuesta promedio de SJF** es:</br>
+
+$$\frac{0 + 5 + 10}{3} = 5$$
+
+&emsp;Como se puede ver, la longitud de la porcion del tiempo es critica para RR. Mientras mas corta se la porcion de tiempo, mejor sera el desempeño de RR bajo la metrica de tiempo de respuesta. Sin embargo, hacer la porcion de tiempo muy corta es problematico: derrepente el costo de cambio de contexto dominaria todo el desempeño. Por lo tanto, decidir la longitud de la porcion de tiempo representa un compromiso para un diseñador de sistemas, hacerlo lo sufucientemente largo para **amortizar** el costo del cambio de contexto sin hacerlo tan largo que el sistema ya no sea sensible al tiempo de respuesta.</br>
+&emsp;Notar que el cambio de contexto no surge solamente del las acciones de guardado y recuperado de registros del OS. Cuando los programas se ejecutan, acumulan una gran cantidad de datos de estado en la cache de la CPU, TLBs, *branch predictors*, y otros tipos de hardware en el chip. Cambiar a otro proceso causa que este estado sea descargado y un nuevo estado relevante del nuevo proceso sea traido, lo cual tiene un notable costo de desempeño.</br>
+&emsp;RR, con una razonable porcion de tiempo, es un excelente plnificador si el tiempo de despuesta es nuestra unica metrica. Pero que pasa cuando nuestro viejo amigo, el tiempo de entrega. Veamos de nuevo el ejemplo de arriba. A, B, y C,cada uno con un tiempo de ejcucion de 5s, llegan al mismo tiempo, y el planificador es RR con una porcion de tiempo de 1s. Podemos ver en la imagen que A termina al 13, B al 14, y C al 15, para un promedio de 14. Muy mal promedio!.</br>
+&emsp;Entonces, no es una sorpresa, que RR es porsupuesto la peor politica de nuestra metrica es el tiempo de entrega. Intuitivamente, esto tiene sentido: lo que esta haciendo RR es alargando cada procesos tanto como puede, esto sucede porque ejecuta un proceso un corto periodo de tiempo y cambia al siguiente. Dado que el tiempo de entrega solo se preocupa de cuando finaliza un proceso, RR esta cerca de ser pesimo, en muchos casos incluso pero que el simple FIFO.</br>
+&emsp;Mas generalmente, cualquier politica (como RR) que es **equitativa**, es decir, que eventualemente dividira la CPU entre los procesos activos en una corta escala de tiempo, desempeñara peor en metricas como el tiempo de entrega. Por supuesto, este es un sacrificio heredado: si estas dispuesto a no ser equitativo, puedes ejecutar el proceso mas corto hasta que se complete, el el costo de tiempo de respuesta se elevara; y si encambio valoras la equidad, el tiempo de respuesta bajara, pero se elevara el tiempo de entrega. Este tipo de sacrificios con comunes en los sistemas;</br>
+&emsp;Hemos desarrolado dos tipos de planificadores. El primer tipo (SJF, STCF) optimizan el tiempo de entrega, pero tienen un mal tiempo de respuesta. El segundo tipo (RR) optimizan el tiempo de respuesta pero es malo para el tiempo de entrega. Y aun tenemos dos suposiciones que necesitan suavizarce: la suposicion 4 (los procesos no hacen I/O), y la suposicion 5 (conocemos el tiempo de ejecucion de cada proceso).</br>
 
 [Anterior](./Ejecucion-directa.md) [Siguiente](./Planificador-multinivel.md)
