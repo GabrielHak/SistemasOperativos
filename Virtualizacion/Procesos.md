@@ -12,7 +12,8 @@ Temas:
 
 * [API de procesos](./API-de-procesos.md)
 * [Ejecucion directa limitada](./Ejecucion-directa.md)
-* [Planificacion](Virtualizacion-Planificacion.md)
+* [Planificacion](./Planificacion.md)
+* [Planificacion multinivel](./Planificador-multinivel.md)
 * [Espacio de direcciones](Virtualizacion-espacio-de-direcciones.md)
 * [API de memoria](Virtualizacion-API-de-memoria.md)
 * [El mecanismo de traduccion de direcciones](Virtualizacion-El-menismo-de-traduccion-de-direcciones.md)
