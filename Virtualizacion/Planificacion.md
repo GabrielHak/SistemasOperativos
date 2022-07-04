@@ -17,7 +17,7 @@ Temas:
   * [Incorporando I/O](#incorporando-io)
 
 * [Planificacion multinivel](./Planificador-multinivel.md)
-* [Espacio de direcciones](Virtualizacion-espacio-de-direcciones.md)
+* [Espacio de direcciones](./Espacio-direcciones.md)
 * [API de memoria](Virtualizacion-API-de-memoria.md)
 * [El mecanismo de traduccion de direcciones](Virtualizacion-El-menismo-de-traduccion-de-direcciones.md)
 * [Segmentacion](Virtualizacion-Segmentacion.md)
