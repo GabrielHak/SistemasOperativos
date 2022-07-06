@@ -21,9 +21,9 @@ Temas:
   * [Modificando MLFQ y otros inconvenientes](#modificando-mlfq-y-otros-invonvenientes)
   * [MLFQ final](#mlfq-final)
 
-* [Espacio de direcciones](./Espacio-direcciones.md)
-* [API de memoria](Virtualizacion-API-de-memoria.md)
-* [El mecanismo de traduccion de direcciones](Virtualizacion-El-menismo-de-traduccion-de-direcciones.md)
+* [La abstraccion del espacio de direcciones](./Espacio-direcciones.md)
+* [API de memoria](./API-memoria.md)
+* [El mecanismo de traduccion de direcciones](./Traduccion-direcciones.md)
 * [Segmentacion](Virtualizacion-Segmentacion.md)
 * [Administracion de espacio libre](Virtualizacion-Administracion-de-espacio-libre.md)
 * [Paginacion](Virtualizacion-Paginacion.md)

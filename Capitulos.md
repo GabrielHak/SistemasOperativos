@@ -18,7 +18,7 @@ Indice de temas y capitulos:
   * Ejecucion directa limitada
   * Planificacion
   * Planificacion multivel
-  * Espacio de direcciones
+  * La abstraccion del espacio de direcciones
   * API de memoria
   * El mecanismo de traduccion de direcciones
   * Segmentacion
