@@ -25,7 +25,7 @@ Temas:
   * [Soporte subyacente del OS](#soporte-subayciente-del-os)
 
 * [El mecanismo de traduccion de direcciones](./Traduccion-direcciones.md)
-* [Segmentacion](Virtualizacion-Segmentacion.md)
+* [Segmentacion](./Segmentacion.md)
 * [Administracion de espacio libre](Virtualizacion-Administracion-de-espacio-libre.md)
 * [Paginacion](Virtualizacion-Paginacion.md)
 * [TLBs](Virtualizacion-TBLs.md)
@@ -35,7 +35,7 @@ Bibliografia: [OSTEP Cap - 14 Cap 14 Interlude: Memory API](https://pages.cs.wis
 
 ## Interlude: API de memoria
 
-&emsp;En este interlude, discutiremos las interfaces de asignacion de memoria en los sistemas UNIX. Las interfaces provistas son bastantes simples. El problema principal que trataremos es: Como asignar y manejar memoria?, Que infertaces con comunmente usadas? Que errores podriamos evitar?</br>
+&emsp;En este interlude, discutiremos las interfaces de asignacion de memoria en los sistemas UNIX. Las interfaces provistas son bastantes simples. El problema principal que trataremos es: Como asignar y manejar memoria?, Que infertaces son comunmente usadas? Que errores podriamos evitar?</br>
 
 ### Tipos de memoria
 
@@ -142,7 +142,7 @@ strcpy(dst, src); //work properly
 
 ```c
 char *src = "Hello";
-char *dst = (char *) malloc(strelen(src)); //to small!!
+char *dst = (char *) malloc(strlen(src)); //to small!!
 strcpy(dst, src); //work properly
 ```
 
@@ -178,6 +178,6 @@ strcpy(dst, src); //work properly
 
 ### Otras llamadas
 
-&emsp;Hay mas llamadas que la libreria de asignacion de memoria soporta. POr ejemplo, *calloc()* asigna memoria y las incia en cero antes de retornarla; esto previene algunos errores cuando asumes que la memoria contiene ceros y te olvidas de inicializarla. La rutina *realloc()* puede ser util, , reserva una region de memoria nueva mas grande, copia el contenido de la region vieja, y retorna el puntero a la nueva region.</br>
+&emsp;Hay mas llamadas que la libreria de asignacion de memoria soporta. Por ejemplo, *calloc()* asigna memoria y las incia en cero antes de retornarla; esto previene algunos errores cuando asumes que la memoria contiene ceros y te olvidas de inicializarla. La rutina *realloc()* puede ser util, , reserva una region de memoria nueva mas grande, copia el contenido de la region vieja, y retorna el puntero a la nueva region.</br>
 
 [Anterior](./Espacio-direcciones.md) [Siguiente](./Traduccion-direcciones.md)

@@ -15,7 +15,7 @@ Temas:
 
 * [API de memoria](./API-memoria.md)
 * [El mecanismo de traduccion de direcciones](./Traduccion-direcciones.md)
-* [Segmentacion](Virtualizacion-Segmentacion.md)
+* [Segmentacion](./Segmentacion.md)
 * [Administracion de espacio libre](Virtualizacion-Administracion-de-espacio-libre.md)
 * [Paginacion](Virtualizacion-Paginacion.md)
 * [TLBs](Virtualizacion-TBLs.md)
