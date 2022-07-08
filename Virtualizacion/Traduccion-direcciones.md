@@ -20,8 +20,8 @@ Temas:
   * [Soporte del Hardware: Resumen](#soporte-del-hardware--resumen)
   * [Problemas del OS](#problemas-del-os)
 
-* [Segmentacion](Virtualizacion-Segmentacion.md)
-* [Administracion de espacio libre](Virtualizacion-Administracion-de-espacio-libre.md)
+* [Segmentacion](./Segmentacion.md)
+* [Administracion de espacio libre](./Espacio-libre.md)
 * [Paginacion](Virtualizacion-Paginacion.md)
 * [TLBs](Virtualizacion-TBLs.md)
 * [Archivo de intercambio, mecanismo y politica](Virtualizacion-Archivo-de-intercambio-mecanismos-politica.md)
