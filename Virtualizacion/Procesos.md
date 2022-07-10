@@ -19,7 +19,7 @@ Temas:
 * [El mecanismo de traduccion de direcciones](./Traduccion-direcciones.md)
 * [Segmentacion](./Segmentacion.md)
 * [Administracion de espacio libre](./Espacio-libre.md)
-* [Paginacion](Virtualizacion-Paginacion.md)
+* [Paginacion](./Paginacion.md)
 * [TLBs](Virtualizacion-TBLs.md)
 * [Archivo de intercambio, mecanismo y politica](Virtualizacion-Archivo-de-intercambio-mecanismos-politica.md)
 

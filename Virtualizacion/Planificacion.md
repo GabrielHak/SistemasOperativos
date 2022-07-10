@@ -4,7 +4,7 @@ Temas:
 
 * [Procesos](./Procesos.md)
 * [API de procesos](./API-de-procesos.md)
-* [Ejecucion directa limitada](#mecanismo-ejecucion-directa-limitada)
+* [Ejecucion directa limitada](./Ejecucion-directa.md)
 * [Planificacion](#introduccion-planificacion-scheduling): &larr; Usted esta aqui
 
   * [Suposiciones de carga de trabajo](#suposiciones-de-carga-de-trabajo)
@@ -22,7 +22,7 @@ Temas:
 * [El mecanismo de traduccion de direcciones](./Traduccion-direcciones.md)
 * [Segmentacion](./Segmentacion.md)
 * [Administracion de espacio libre](./Espacio-libre.md)
-* [Paginacion](Virtualizacion-Paginacion.md)
+* [Paginacion](./Paginacion.md)
 * [TLBs](Virtualizacion-TBLs.md)
 * [Archivo de intercambio, mecanismo y politica](Virtualizacion-Archivo-de-intercambio-mecanismos-politica.md)
 

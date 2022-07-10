@@ -4,9 +4,9 @@ Temas:
 
 * [Procesos](./Procesos.md)
 * [API de procesos](./API-de-procesos.md)
-* [Ejecucion directa limitada](#mecanismo-ejecucion-directa-limitada)
-* [Planificacion](#introduccion-planificacion-scheduling)
-* [Planificacion multinivel](#planificador-la-cola-de-retroalimentacion-multinivel)
+* [Ejecucion directa limitada](./Ejecucion-directa.md)
+* [Planificacion](./Planificacion.md)
+* [Planificacion multinivel](./Planificador-multinivel.md)
 * [La abstraccion del espacio de direcciones](#la-abstraccion-espacios-de-memoria): &larr; Usted esta aqui
 
   * [Primeros Sistemas](#primeros-sistemas)
@@ -17,7 +17,7 @@ Temas:
 * [El mecanismo de traduccion de direcciones](./Traduccion-direcciones.md)
 * [Segmentacion](./Segmentacion.md)
 * [Administracion de espacio libre](./Espacio-libre.md)
-* [Paginacion](Virtualizacion-Paginacion.md)
+* [Paginacion](./Paginacion.md)
 * [TLBs](Virtualizacion-TBLs.md)
 * [Archivo de intercambio, mecanismo y politica](Virtualizacion-Archivo-de-intercambio-mecanismos-politica.md)
 
