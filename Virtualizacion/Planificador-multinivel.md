@@ -27,7 +27,7 @@ Temas:
 * [Segmentacion](./Segmentacion.md)
 * [Administracion de espacio libre](./Espacio-libre.md)
 * [Paginacion](./Paginacion.md)
-* [TLBs](Virtualizacion-TBLs.md)
+* [TLBs](./TLBs.md)
 * [Archivo de intercambio, mecanismo y politica](Virtualizacion-Archivo-de-intercambio-mecanismos-politica.md)
 
 Bibliografia: [OSTEP Cap - 8 Scheduling: The Multi-Level Feedback Queue](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf)

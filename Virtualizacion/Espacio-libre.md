@@ -36,7 +36,7 @@ Temas:
     * [Otras ideas](#otras-ideas)
 
 * [Paginacion](./Paginacion.md)
-* [TLBs](Virtualizacion-TBLs.md)
+* [TLBs](./TLBs.md)
 * [Archivo de intercambio, mecanismo y politica](Virtualizacion-Archivo-de-intercambio-mecanismos-politica.md)
 
 Bibliografia: [OSTEP Cap - 17 Free-Space Management](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf)
