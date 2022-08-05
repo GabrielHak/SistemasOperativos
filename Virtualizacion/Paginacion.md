@@ -21,7 +21,7 @@ Temas:
   * [Un rastro de memoria](#un-rastro-de-memoria)
 
 * [TLBs](./TLBs.md)
-* [Archivo de intercambio, mecanismo y politica](Virtualizacion-Archivo-de-intercambio-mecanismos-politica.md)
+* [Paginacion multinivel](./Paginacion-Multinivel.md/)
 
 Bibliografia: [OSTEP Cap - 18 Paging: Introduction](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf)
 

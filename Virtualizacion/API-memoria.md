@@ -29,7 +29,7 @@ Temas:
 * [Administracion de espacio libre](./Espacio-libre.md)
 * [Paginacion](./Paginacion.md)
 * [TLBs](./TLBs.md)
-* [Archivo de intercambio, mecanismo y politica](Virtualizacion-Archivo-de-intercambio-mecanismos-politica.md)
+* [Paginacion multinivel](./Paginacion-Multinivel.md/)
 
 Bibliografia: [OSTEP Cap - 14 Cap 14 Interlude: Memory API](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-api.pdf)
 

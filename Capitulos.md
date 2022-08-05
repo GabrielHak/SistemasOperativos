@@ -25,7 +25,7 @@ Indice de temas y capitulos:
   * Administracion del espacio libre
   * Paginacion
   * TLBs
-  * Archivos de intercambio, mecanismo y politica
+  * Paginacion Multinivel
 
 * Parte II &rarr; Concurrencia:
   
