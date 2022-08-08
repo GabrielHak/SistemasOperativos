@@ -37,7 +37,7 @@ Temas:
 
 * [Paginacion](./Paginacion.md)
 * [TLBs](./TLBs.md)
-* [Paginacion multinivel](./Paginacion-Multinivel.md/)
+* [Paginacion multinivel](./Paginacion-Multinivel.md)
 
 Bibliografia: [OSTEP Cap - 17 Free-Space Management](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf)
 

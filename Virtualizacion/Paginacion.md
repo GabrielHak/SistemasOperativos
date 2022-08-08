@@ -21,7 +21,7 @@ Temas:
   * [Un rastro de memoria](#un-rastro-de-memoria)
 
 * [TLBs](./TLBs.md)
-* [Paginacion multinivel](./Paginacion-Multinivel.md/)
+* [Paginacion multinivel](./Paginacion-Multinivel.md)
 
 Bibliografia: [OSTEP Cap - 18 Paging: Introduction](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf)
 

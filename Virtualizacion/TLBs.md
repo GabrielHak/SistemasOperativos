@@ -23,7 +23,7 @@ Temas:
   * [Problema: Política de reemplazo](#problema-política-de-reemplazo)
   * [Una entrada de TLB real](#una-entrada-de-tlb-real)
 
-* [Paginacion multinivel](./Paginacion-Multinivel.md/)
+* [Paginacion multinivel](./Paginacion-Multinivel.md)
 
 Bibliografia: [OSTEP Cap - 19 Paging: Faster Translations (TLBs)](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf)
 
@@ -143,4 +143,4 @@ for (i = 0; i < 10; i++) {
 &emsp;MIPS TLBS usalmente tienen 32 o 64 de estas entradas, muchas de las cuales son usadas por los procesos cuando se ejecutan. Sin embargo, algunas están reservadas para el OS. Un registro *cableado* puede ser seteado por el OS para decirle al hardware cuántos slots de la TLB reservar para el OS; el OS usa esos mapeos reservados para código y datos a los que quiere acceder en tiempos críticos, donde un TLB miss podría ser un problema.</br>
 &emsp;Dado que el MIPS TLB es manejado por software , en necesaria que haya instrucciones para actualizar la TLB. El MIPS provee 4 instrucciones: TLBP, la cual explora la TLB para ver si existe una traduccion; TLBR, lee el conteniado de una entrada de TLB en los registros; TLBWI, reemplaza una entra específica; y TLBWR, la cual reemplaza una entrada TLB aleatoria. El OS usa estas instrucciones para manejar el contenido de la TLB. Obviamente es crítico que esas instrucciones sean privilegiadas.</br>
 
-[Anterior](./Paginacion.md) [Siguiente](./Paginacion-Multinivel.md/)
+[Anterior](./Paginacion.md) [Siguiente](./Paginacion-Multinivel.md)

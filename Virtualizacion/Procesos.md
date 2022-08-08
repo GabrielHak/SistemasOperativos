@@ -21,7 +21,7 @@ Temas:
 * [Administracion de espacio libre](./Espacio-libre.md)
 * [Paginacion](./Paginacion.md)
 * [TLBs](./TLBs.md)
-* [Paginacion multinivel](./Paginacion-Multinivel.md/)
+* [Paginacion multinivel](./Paginacion-Multinivel.md)
 
 Bibliografia: [OSTEP Cap 4 - Processes](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf)
 
