@@ -27,13 +27,14 @@ Indice de temas y capitulos:
   * TLBs
   * Paginacion Multinivel
 
-* Parte II &rarr; Concurrencia:
-  
+* [Parte II &rarr; Concurrencia](./Concurrencia/Introduccion.md):
+
+  * Introducción  
   * API de hilos
   * Candados
   * Estructuras de datos sincronizadas
   * Variables de condicion
-  * Semaaforos
+  * Semaforos
   * Problemas tipicos de concurrencia
 
 * Parte III &rarr; Persistencia:

@@ -179,4 +179,4 @@ AddressOfPTE    = Base[SN] + (VPN * sizeof(PTE))
 
 &emsp;Hasta ahora, asumimos que las page tables estan en la memoria física del kernel. Incluso con nuestro trucos para reducir el tamaño de las page tables, todavía es posible que sean muy grandes. Por lo tanto, algunos sistemas ponen esas tablas en la memoria virtual del kernel, de este modo le permite al sistema cambiar las tablas al disco cuando la memoria esta muy llena.</br>
 
-[Anterior](./TLBs.md) [Siguiente](./Paginacion-Multinivel.md)
+[Anterior](./TLBs.md) [Siguiente](../Concurrencia/Introduccion.md)
