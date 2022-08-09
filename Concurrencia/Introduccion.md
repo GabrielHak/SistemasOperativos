@@ -12,7 +12,7 @@ Temas:
   * [Un problema más: Esperando por el otro](#un-problema-más-esperando-por-el-otro)
 
 * [API de hilos](./API-Hilos.md)
-* [Candados](..)
+* [Candados](./Candados.md)
 * [Estructuras de datos sincronizadas](..)
 * [Variables de condicion](..)
 * [Semáforos](..)
